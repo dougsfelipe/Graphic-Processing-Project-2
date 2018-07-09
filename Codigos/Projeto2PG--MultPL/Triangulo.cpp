@@ -1,10 +1,11 @@
 #include "Triangulo.h"
 #include "Ponto.h"
+#include "Functions.h"
 #include <iostream>
-
+#include <stdio.h>
 using namespace std;
 
-void Triangulo::CriarTriangulo(Ponto* p1,Ponto* p2,Ponto* p3)
+void Triangulo::CriarTriangulo(Ponto* p1,Ponto* p2,Ponto* p3,FILE* out)
 {
     this->pontos[0]=p1;this->pontos[1]=p2;this->pontos[2]=p3;
 
@@ -23,6 +24,8 @@ void Triangulo::CriarTriangulo(Ponto* p1,Ponto* p2,Ponto* p3)
     this->tnormal[0]=(vetorp1p2[1]*vetorp1p3[2])-(vetorp1p2[2]*vetorp1p3[1]);
     this->tnormal[1]=(vetorp1p2[2]*vetorp1p3[0])-(vetorp1p2[0]*vetorp1p3[2]);
     this->tnormal[2]=(vetorp1p2[0]*vetorp1p3[1])-(vetorp1p2[1]*vetorp1p3[0]);
+    //fprintf(out,"%f%,%f,%f\n",this->tnormal[0],this->tnormal[1],this->tnormal[2]);
+    cout<<this->tnormal[0]<<","<<cout<<this->tnormal[1]<<","<<cout<<this->tnormal[2]<<endl;
     this->pontos[0]->addTnormal(this->tnormal[0],this->tnormal[1],this->tnormal[2]);
     this->pontos[1]->addTnormal(this->tnormal[0],this->tnormal[1],this->tnormal[2]);
     this->pontos[2]->addTnormal(this->tnormal[0],this->tnormal[1],this->tnormal[2]);
@@ -34,4 +37,8 @@ Ponto* Triangulo::getPontos()
 float* Triangulo::getTnormal()
 {
     return this->tnormal;
+}
+void Triangulo::normalizarTnormal(Functions* funct)
+{
+    funct->normalizar(this->tnormal);
 }

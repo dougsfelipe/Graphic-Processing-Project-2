@@ -1,6 +1,7 @@
 #ifndef CAMERA_H_INCLUDED
 #define CAMERA_H_INCLUDED
-
+#include "Functions.h"
+#include <stdio.h>
 class Camera{
 private:
     float C[3];
@@ -10,14 +11,17 @@ private:
     float d;
     float hx;
     float hy;
+    Functions* funct;
 public:
-    bool InicializarCam();
+    bool InicializarCam(Functions* funct,FILE* out);
     float* GetC();
     float* GetN();
     float* GetU();
+    float* GetV();
     float Getd();
     float Gethx();
     float Gethy();
+
 };
 
 #endif // CAMERA_H_INCLUDED

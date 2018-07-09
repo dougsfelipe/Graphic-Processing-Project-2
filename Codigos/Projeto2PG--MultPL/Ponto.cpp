@@ -1,11 +1,14 @@
 #include<iostream>
 #include"Ponto.h"
 #include <math.h>
+#include <stdio.h>
 using namespace std;
 
-    void Ponto::addPonto(float x,float y, float z)
+    void Ponto::addPonto(float x,float y, float z,FILE* out)
     {
         this->ponto[0]=x;this->ponto[1]=y;this->ponto[2]=z;
+        fprintf(out,"%f,%f,%f\n",this->ponto[0],this->ponto[1],this->ponto[2]);
+        cout<<this->ponto[0]<<","<<this->ponto[1]<<","<<this->ponto[2]<<endl;
         this->pnormal[0]=0;this->pnormal[1]=0;this->pnormal[2]=0;
         this->sTnomal[0]=0;this->sTnomal[1]=0;this->sTnomal[2]=0;
         this->nTincidentes=0;
@@ -18,6 +21,16 @@ using namespace std;
     float* Ponto::GetPnormal()
     {
         return this->pnormal;
+    }
+    float* Ponto::GetPvista()
+    {
+        return this->PVista;
+    }
+    void Ponto::addPvista(float* v)
+    {
+        this->PVista[0]=*v;
+        this->PVista[1]=*(v+1);
+        this->PVista[2]=*(v+2);
     }
     void Ponto::addTnormal(float x,float y,float z)
     {
