@@ -23,6 +23,7 @@ public:
     float getKd();
     float* getOd();
     float getks();
+    void printIlumi(FILE* out);
 };
 
 

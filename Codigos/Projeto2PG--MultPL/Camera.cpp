@@ -4,7 +4,7 @@
 #include <math.h>
 using namespace std;
 
-bool Camera::InicializarCam(Functions* funct)
+bool Camera :: InicializarCam(Functions* funct)
 {
     FILE *camera=fopen("camera.cfg","rt");
     if(camera!=NULL)
@@ -48,7 +48,7 @@ bool Camera::InicializarCam(Functions* funct)
         this->U[0]=*aux;this->U[1]=*(aux+1);this->U[2]=*(aux+2);
         //
 
-        this->funct->setAlpha(this->U,this->V,this->N,this->C)//colocando a matriz na area de calcular funções;
+        this->funct->setAlpha(this->U,this->V,this->N,this->C);//colocando a matriz na area de calcular funções;
 
 
         return true;
@@ -85,5 +85,5 @@ bool Camera::InicializarCam(Functions* funct)
     }
     void Camera::printCam(FILE* out)
     {
-        fprintf(out,"U:(%f,%f,%f)/nV:(%f,%f,%f)/nN:(%f,%f,%f)/n",this->U[0],this->U[1],this->U[2],this->V[0],this->V[1],this->V[2]this->N[0],this->N[1],this->N[2]);
+        fprintf(out,"U:(%f,%f,%f)\nV:(%f,%f,%f)\nN:(%f,%f,%f)\n",this->U[0],this->U[1],this->U[2],this->V[0],this->V[1],this->V[2],this->N[0],this->N[1],this->N[2]);
     }

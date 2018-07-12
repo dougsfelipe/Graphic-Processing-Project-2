@@ -5,7 +5,7 @@
 #include "Functions.h"
 using namespace std;
 
-    void Ponto::addPonto(float x,float y, float z)
+    void Ponto :: addPonto(float x,float y, float z)
     {
         this->ponto[0]=x;this->ponto[1]=y;this->ponto[2]=z;
         this->pnormal[0]=0;this->pnormal[1]=0;this->pnormal[2]=0;

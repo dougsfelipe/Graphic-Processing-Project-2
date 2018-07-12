@@ -11,7 +11,7 @@ bool Iluminacao::inicarIluminacao(Functions* funct)
     if(ilumin!=NULL)
     {
         this->funct=funct;
-        float* aux=this->funct->GetRetorno();
+        float* aux=funct->GetRetorno();
         // carregando iluminação
         fscanf(ilumin,"%f",&this->ka);
         fscanf(ilumin,"%f",&this->Ia[0]);fscanf(ilumin,"%f",&this->Ia[1]);fscanf(ilumin,"%f",&this->Ia[2]);
@@ -73,4 +73,18 @@ float* Iluminacao::  getOd()
 float Iluminacao::  getks()
 {
     return this->ks;
+}
+void Iluminacao::printIlumi(FILE* out)
+{
+    int i=0;
+    float* aux;
+    for(i=0;i<this->qtPontosluz;i++)
+    {
+        aux=this->pontos[i].getCordMundo();
+        fprintf(out,"Ponto %d:\n",i);
+        fprintf(out,"cord_mundo: (%f,%f,%f) ",*aux,*(aux+1),*(aux+2));
+        aux=this->pontos[i].getCordVista();
+        fprintf(out,"cord_vista: (%f,%f,%f)\n\n",*aux,*(aux+1),*(aux+2));
+
+    }
 }

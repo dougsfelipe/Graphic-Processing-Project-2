@@ -5,7 +5,7 @@
 #include <stdio.h>
 using namespace std;
 
-void Triangulo::CriarTriangulo(Ponto* p1,Ponto* p2,Ponto* p3)
+void Triangulo :: CriarTriangulo(Ponto* p1,Ponto* p2,Ponto* p3)
 {
     this->pontos[0]=p1;this->pontos[1]=p2;this->pontos[2]=p3;
 
@@ -39,6 +39,7 @@ float* Triangulo::getTnormal()
 }
 void Triangulo::normalizarTnormal(Functions* funct)
 {
-    float *aux=funct->normalizar(this->tnormal);
+    float* aux=funct->GetRetorno();
+    funct->normalizar(this->tnormal);
     this->tnormal[0]=*(aux);this->tnormal[1]=*(aux+1);this->tnormal[2]=*(aux+2);
 }

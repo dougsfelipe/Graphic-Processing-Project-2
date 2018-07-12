@@ -17,6 +17,8 @@ public:
     Ponto* getPontos();
     Triangulo* getTriangulos();
     void setCordsVista(float* U,float* V, float* N,float* C);
+    void printNormalPontos(FILE* out);
+    void printNormalTriangulos(FILE* out);
 };
 
 

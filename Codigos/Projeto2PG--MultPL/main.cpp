@@ -16,9 +16,17 @@ int main()
     Camera cam;
     Objeto obj;
     Iluminacao Iluminacao;
-    cam.InicializarCam(&funct,out);
-    obj.iniciarObj(&funct,out);
-    Iluminacao.inicarIluminacao(&funct,out);
+    cam.InicializarCam(&funct);
+    obj.iniciarObj(&funct);
+    Iluminacao.inicarIluminacao(&funct);
+    fprintf(out,"camera:\n");
+    cam.printCam(out);
+    fprintf(out,"iluminacao:\n");
+    Iluminacao.printIlumi(out);
+    fprintf(out,"Pontos:\n");
+    obj.printNormalPontos(out);
+    fprintf(out,"Normal triangulos:\n");
+    obj.printNormalTriangulos(out);
     fclose(out);
 
     return 0;

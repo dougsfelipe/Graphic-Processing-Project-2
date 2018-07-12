@@ -12,17 +12,17 @@
 
 1530974416 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\ponto.h
 
-1531102287 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\camera.cpp
+1531435527 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\camera.cpp
 	"Camera.h"
 	<iostream>
 	<stdio.h>
 	<math.h>
 
-1531101461 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\camera.h
+1531433150 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\camera.h
 	"Functions.h"
 	<stdio.h>
 
-1531103274 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\main.cpp
+1531434993 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\main.cpp
 	"Ponto.h"
 	"Triangulo.h"
 	<iostream>
@@ -32,28 +32,30 @@
 	"Iluminacao.h"
 	<stdio.h>
 
-1531102347 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\ponto.h
+1531433150 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\ponto.h
 	<stdio.h>
+	"Functions.h"
 
-1531102679 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.h
+1531433150 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.h
 	"Ponto.h"
 	"Functions.h"
 	<stdio.h>
 
-1531103538 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\ponto.cpp
+1531435234 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\ponto.cpp
 	<iostream>
 	"Ponto.h"
 	<math.h>
 	<stdio.h>
+	"Functions.h"
 
-1531105188 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.cpp
+1531435404 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.cpp
 	"Triangulo.h"
 	"Ponto.h"
 	"Functions.h"
 	<iostream>
 	<stdio.h>
 
-1531105134 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\objeto.cpp
+1531435527 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\objeto.cpp
 	<iostream>
 	<stdio.h>
 	"Ponto.h"
@@ -61,34 +63,34 @@
 	"Objeto.h"
 	"Functions.h"
 
-1531093429 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\pontoluz.cpp
+1531433150 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\pontoluz.cpp
 	"PontoLuz.h"
 	<iostream>
 
-1531093331 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\pontoluz.h
+1531433150 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\pontoluz.h
 	"Functions.h"
 
-1531092582 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\functions.h
+1531433150 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\functions.h
 
-1531094334 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\functions.cpp
+1531434827 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\functions.cpp
 	<iostream>
 	"Functions.h"
 	<math.h>
 
-1531101637 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\objeto.h
+1531433383 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\objeto.h
 	"Ponto.h"
 	"Triangulo.h"
 	"Functions.h"
 	<stdio.h>
 
-1531101726 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\iluminacao.cpp
+1531435527 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\iluminacao.cpp
 	"PontoLuz.h"
 	"Functions.h"
 	<iostream>
 	<stdio.h>
 	"Iluminacao.h"
 
-1531101726 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\iluminacao.h
+1531433301 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\iluminacao.h
 	"PontoLuz.h"
 	"Functions.h"
 	<stdio.h>
