@@ -1,6 +1,7 @@
 #ifndef PONTO_H_INCLUDED
 #define PONTO_H_INCLUDED
 #include <stdio.h>
+#include "Functions.h"
 class Ponto
 {
 private:
@@ -10,11 +11,12 @@ private:
     float PVista [3];
     int nTincidentes;
 public:
-    void addPonto(float x,float y,float z,FILE* out);
+    void addPonto(float x,float y,float z);
     float* GetPonto();
     float* GetPnormal();
     float* GetPvista();
     void addTnormal(float x,float y,float z);
     void addPvista(float* v);
+    void normalizaNormal(Functions* funct);
 };
 #endif // PONTO_H_INCLUDED

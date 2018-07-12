@@ -2,13 +2,12 @@
 #include"Ponto.h"
 #include <math.h>
 #include <stdio.h>
+#include "Functions.h"
 using namespace std;
 
-    void Ponto::addPonto(float x,float y, float z,FILE* out)
+    void Ponto::addPonto(float x,float y, float z)
     {
         this->ponto[0]=x;this->ponto[1]=y;this->ponto[2]=z;
-        fprintf(out,"%f,%f,%f\n",this->ponto[0],this->ponto[1],this->ponto[2]);
-        cout<<this->ponto[0]<<","<<this->ponto[1]<<","<<this->ponto[2]<<endl;
         this->pnormal[0]=0;this->pnormal[1]=0;this->pnormal[2]=0;
         this->sTnomal[0]=0;this->sTnomal[1]=0;this->sTnomal[2]=0;
         this->nTincidentes=0;
@@ -41,4 +40,10 @@ using namespace std;
         this->pnormal[0]=sTnomal[0]/this->nTincidentes;
         this->pnormal[1]=sTnomal[1]/this->nTincidentes;
         this->pnormal[2]=sTnomal[2]/this->nTincidentes;
+    }
+    void Ponto::normalizaNormal(Functions* funct)
+    {
+        float* aux=funct->GetRetorno();
+        funct->calcNorma(this->pnormal);
+        this->pnormal[0]=*(aux);this->pnormal[1]=*(aux+1);this->pnormal[2]=*(aux+2);
     }

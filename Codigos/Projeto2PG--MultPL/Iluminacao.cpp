@@ -5,12 +5,14 @@
 #include "Iluminacao.h"
 using namespace std;
 
-bool Iluminacao::inicarIluminacao(Functions* funct,FILE* out)
+bool Iluminacao::inicarIluminacao(Functions* funct)
 {
     FILE* ilumin=fopen("multi_iluminacao.txt","rt");
     if(ilumin!=NULL)
     {
         this->funct=funct;
+        float* aux=this->funct->GetRetorno();
+        // carregando iluminação
         fscanf(ilumin,"%f",&this->ka);
         fscanf(ilumin,"%f",&this->Ia[0]);fscanf(ilumin,"%f",&this->Ia[1]);fscanf(ilumin,"%f",&this->Ia[2]);
         fscanf(ilumin,"%f",&this->kd);
@@ -18,6 +20,9 @@ bool Iluminacao::inicarIluminacao(Functions* funct,FILE* out)
         fscanf(ilumin,"%f",&this->ks);
         fscanf(ilumin,"%d",&this->qtPontosluz);
         this->pontos=new PontoLuz[qtPontosluz];
+        //
+
+        //salvando todos os pontos de luz
         int i=0;
         for(i=0;i<this->qtPontosluz;i++)
         {
@@ -25,9 +30,13 @@ bool Iluminacao::inicarIluminacao(Functions* funct,FILE* out)
             fscanf(ilumin,"%f",&x);fscanf(ilumin,"%f",&y);fscanf(ilumin,"%f",&z);
             fscanf(ilumin,"%f",&r);fscanf(ilumin,"%f",&g);fscanf(ilumin,"%f",&b);
             this->pontos[i].addPontoLuz(x,y,z,r,g,b);
-            float* aux=this->funct->calcCord_vista(this->pontos[i].getCordMundo());
+            //calculando cordenadas de vista
+            this->funct->calcCord_vista(this->pontos[i].getCordMundo());
             this->pontos[i].addCortdVista(aux);
+            //
         }
+        //
+
         fclose(ilumin);
         return true;
     }

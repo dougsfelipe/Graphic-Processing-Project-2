@@ -13,7 +13,7 @@ private:
     float hy;
     Functions* funct;
 public:
-    bool InicializarCam(Functions* funct,FILE* out);
+    bool InicializarCam(Functions* funct);
     float* GetC();
     float* GetN();
     float* GetU();
@@ -21,6 +21,7 @@ public:
     float Getd();
     float Gethx();
     float Gethy();
+    void printCam(FILE* out);
 
 };
 

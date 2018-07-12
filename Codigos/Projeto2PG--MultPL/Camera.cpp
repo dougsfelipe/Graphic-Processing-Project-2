@@ -4,11 +4,12 @@
 #include <math.h>
 using namespace std;
 
-bool Camera::InicializarCam(Functions* funct,FILE* out)
+bool Camera::InicializarCam(Functions* funct)
 {
     FILE *camera=fopen("camera.cfg","rt");
     if(camera!=NULL)
     {
+        //carrengando valores da camaera
         this->funct=funct;
         fscanf(camera,"%f",&this->C[0]);
         fscanf(camera,"%f",&this->C[1]);
@@ -23,25 +24,31 @@ bool Camera::InicializarCam(Functions* funct,FILE* out)
         fscanf(camera,"%f",&this->hx);
         fscanf(camera,"%f",&this->hy);
         fclose(camera);
+        //
+
+        float* aux=this->funct->GetRetorno();//auxiliar dos calculos
+
+        //normalizar N
         this->funct->normalizar(this->N);
-        float* aux=this->funct->calcOrtogonal(this->N,this->V);
+        this->N[0]=*(aux);this->N[1]=*(aux+1);this->N[2]=*(aux+2);
+        //
+
+        //ortogonalizar V
+        this->funct->calcOrtogonal(this->N,this->V);
         this->V[0]=*aux;this->V[1]=*(aux+1);this->V[2]=*(aux+2);
+        //
+
+        //normalizar V
         this->funct->normalizar(this->V);
-        float* u =this->funct->calcVetorProdVet(this->N,this->V);
-        this->U[0]=*u;this->U[1]=*(u+1);this->U[2]=*(u+2);
-        this->funct->setAlpha(this->U,this->V,this->N,this->C);
-        fprintf(out,"CAMERA:\n");
-        fprintf(out,"C: %f,%f,%f\n",this->C[0],this->C[1],this->C[2]);
-        fprintf(out,"N: %f,%f,%f\n",this->N[0],this->N[1],this->N[2]);
-        fprintf(out,"V: %f,%f,%f\n",this->V[0],this->V[1],this->V[2]);
-        fprintf(out,"U: %f,%f,%f\n",this->U[0],this->U[1],this->U[2]);
-         fprintf(out,"d: %f hx: %f hy: %f\n",this->d,this->hx,this->hy);
-        cout<<"CAMERA:"<<endl;
-        cout<<"C: "<<this->C[0]<<", "<<this->C[1]<<", "<<this->C[2]<<endl;
-        cout<<"N: "<<this->N[0]<<", "<<this->N[1]<<", "<<this->N[2]<<endl;
-        cout<<"V: "<<this->V[0]<<", "<<this->V[1]<<", "<<this->V[2]<<endl;
-        cout<<"U: "<<this->U[0]<<", "<<this->U[1]<<", "<<this->U[2]<<endl;
-        cout<<"d: "<<this->d<<" hx: "<<this->hx<<" hy: "<<this->hy<<endl;
+        this->V[0]=*(aux);this->V[1]=*(aux+1);this->V[2]=*(aux+2);
+        //
+
+        //calcaur U=NxV
+        this->funct->calcVetorProdVet(this->N,this->V);
+        this->U[0]=*aux;this->U[1]=*(aux+1);this->U[2]=*(aux+2);
+        //
+
+        this->funct->setAlpha(this->U,this->V,this->N,this->C)//colocando a matriz na area de calcular funções;
 
 
         return true;
@@ -75,4 +82,8 @@ bool Camera::InicializarCam(Functions* funct,FILE* out)
     float Camera::Gethy()
     {
         return this->hy;
+    }
+    void Camera::printCam(FILE* out)
+    {
+        fprintf(out,"U:(%f,%f,%f)/nV:(%f,%f,%f)/nN:(%f,%f,%f)/n",this->U[0],this->U[1],this->U[2],this->V[0],this->V[1],this->V[2]this->N[0],this->N[1],this->N[2]);
     }

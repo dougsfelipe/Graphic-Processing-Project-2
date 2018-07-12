@@ -14,11 +14,12 @@ public:
     void setAlpha(float* U,float* V,float* N,float* C);
     float calcNorma(float* vetor);
     void normalizar(float* vetor);
-    float* calcProj(float* N,float* V);
-    float* calcOrtogonal(float* N, float* V);
-    float* calcVetorProdVet(float* v1,float* v2);
-    float* calcCord_vista(float* v);
-    float* CorProdutoComponenteComponente(float* cor1,float* cor2);
-    float* CorProdutoComponenteConstante(float* cor, float k);
+    void calcProj(float* N,float* V);
+    void calcOrtogonal(float* N, float* V);
+    void calcVetorProdVet(float* v1,float* v2);
+    void calcCord_vista(float* v);
+    void CorProdutoComponenteComponente(float* cor1,float* cor2);
+    void CorProdutoComponenteConstante(float* cor, float k);
+    float* GetRetorno();
 };
 #endif // FUNCTIONS_H_INCLUDED

@@ -13,7 +13,7 @@ private:
     int qtTriangulos;
     Functions* funct;
 public:
-    bool iniciarObj(Functions* funct,FILE* out);
+    bool iniciarObj(Functions* funct);
     Ponto* getPontos();
     Triangulo* getTriangulos();
     void setCordsVista(float* U,float* V, float* N,float* C);

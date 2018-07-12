@@ -15,7 +15,7 @@ private:
     float ks;
     Functions* funct;
 public:
-    bool inicarIluminacao(Functions* funct,FILE* out);
+    bool inicarIluminacao(Functions* funct);
     PontoLuz* getPontosLuz();
     int getQtpontosluz();
     float getKa();
