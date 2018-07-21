@@ -1,6 +1,6 @@
 # Projeto 2-PG
 
-Tema:Multiplas Fontes de Luz
+Tema:Multiplas Fontes de Luz <\n>
 Equipe:Douglas Felipe (dfcs) , João Placido (jpsn) , Germano Pires (gpc2)
 
 Parte Geral: Implementar o método de visualização de objetos triangulados, através do
