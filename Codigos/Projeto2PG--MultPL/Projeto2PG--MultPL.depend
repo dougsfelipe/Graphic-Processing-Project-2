@@ -6,11 +6,19 @@
 1530891307 c:\users\jpsn\projeto-2---pg\codigos\projeto2pg--multpl\ponto.h
 	<iostream>
 
-1530973369 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\main.cpp
-	<iostream>
+1532193523 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\main.cpp
 	"Ponto.h"
+	"Triangulo.h"
+	<iostream>
+	"Camera.h"
+	"Functions.h"
+	"Objeto.h"
+	"Iluminacao.h"
+	<stdio.h>
 
-1530974416 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\ponto.h
+1532184587 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\ponto.h
+	<stdio.h>
+	"Functions.h"
 
 1531435527 source:c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\camera.cpp
 	"Camera.h"
@@ -93,5 +101,74 @@
 1531433301 c:\users\joaop\desktop\projetos\pg\projeto 2\projeto-2---pg\codigos\projeto2pg--multpl\iluminacao.h
 	"PontoLuz.h"
 	"Functions.h"
+	<stdio.h>
+
+1532184587 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\camera.cpp
+	"Camera.h"
+	<iostream>
+	<stdio.h>
+	<math.h>
+
+1532184587 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\camera.h
+	"Functions.h"
+	<stdio.h>
+
+1532184587 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\functions.h
+
+1532195328 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\functions.cpp
+	<iostream>
+	"Functions.h"
+	<math.h>
+
+1532184587 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\iluminacao.cpp
+	"PontoLuz.h"
+	"Functions.h"
+	<iostream>
+	<stdio.h>
+	"Iluminacao.h"
+
+1532184587 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\pontoluz.h
+	"Functions.h"
+
+1532184587 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\iluminacao.h
+	"PontoLuz.h"
+	"Functions.h"
+	<stdio.h>
+
+1532184587 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.h
+	"Ponto.h"
+	"Functions.h"
+	<stdio.h>
+
+1532184587 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\objeto.h
+	"Ponto.h"
+	"Triangulo.h"
+	"Functions.h"
+	<stdio.h>
+
+1532192429 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\objeto.cpp
+	<iostream>
+	<stdio.h>
+	"Ponto.h"
+	"Triangulo.h"
+	"Objeto.h"
+	"Functions.h"
+
+1532191975 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\ponto.cpp
+	<iostream>
+	"Ponto.h"
+	<math.h>
+	<stdio.h>
+	"Functions.h"
+
+1532184587 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\pontoluz.cpp
+	"PontoLuz.h"
+	<iostream>
+
+1532193379 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.cpp
+	"Triangulo.h"
+	"Ponto.h"
+	"Functions.h"
+	<iostream>
 	<stdio.h>
 

@@ -25,9 +25,7 @@ void Triangulo :: CriarTriangulo(Ponto* p1,Ponto* p2,Ponto* p3)
     this->tnormal[1]=(vetorp1p2[2]*vetorp1p3[0])-(vetorp1p2[0]*vetorp1p3[2]);
     this->tnormal[2]=(vetorp1p2[0]*vetorp1p3[1])-(vetorp1p2[1]*vetorp1p3[0]);
 
-    this->pontos[0]->addTnormal(this->tnormal[0],this->tnormal[1],this->tnormal[2]);
-    this->pontos[1]->addTnormal(this->tnormal[0],this->tnormal[1],this->tnormal[2]);
-    this->pontos[2]->addTnormal(this->tnormal[0],this->tnormal[1],this->tnormal[2]);
+
 }
 Ponto* Triangulo::getPontos()
 {
@@ -42,4 +40,7 @@ void Triangulo::normalizarTnormal(Functions* funct)
     float* aux=funct->GetRetorno();
     funct->normalizar(this->tnormal);
     this->tnormal[0]=*(aux);this->tnormal[1]=*(aux+1);this->tnormal[2]=*(aux+2);
+    this->pontos[0]->addTnormal(this->tnormal[0],this->tnormal[1],this->tnormal[2]);
+    this->pontos[1]->addTnormal(this->tnormal[0],this->tnormal[1],this->tnormal[2]);
+    this->pontos[2]->addTnormal(this->tnormal[0],this->tnormal[1],this->tnormal[2]);
 }

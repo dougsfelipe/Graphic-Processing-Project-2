@@ -37,9 +37,10 @@ using namespace std;
         this->sTnomal[1]=this->sTnomal[1]+y;
         this->sTnomal[2]=this->sTnomal[2]+z;
         this->nTincidentes++;
-        this->pnormal[0]=sTnomal[0]/this->nTincidentes;
-        this->pnormal[1]=sTnomal[1]/this->nTincidentes;
-        this->pnormal[2]=sTnomal[2]/this->nTincidentes;
+        cout<<this->sTnomal[0]<<","<<this->sTnomal[1]<<","<<this->sTnomal[2]<<endl;
+        this->pnormal[0]=this->sTnomal[0]/this->nTincidentes;
+        this->pnormal[1]=this->sTnomal[1]/this->nTincidentes;
+        this->pnormal[2]=this->sTnomal[2]/this->nTincidentes;
     }
     void Ponto::normalizaNormal(Functions* funct)
     {

@@ -44,9 +44,9 @@ void Functions::calcVetorProdVet(float* v1,float *v2)
 
 void Functions::calcCord_vista(float *v)
 {
-    this->retorno[0]=this->U[0]*((*(v))-this->C[1])+this->U[1]*((*(v+1))-this->C[1])+this->U[2]*((*(v+2))-this->C[2]);
-    this->retorno[1]=this->V[0]*((*(v))-this->C[1])+this->V[1]*((*(v+1))-this->C[1])+this->V[2]*((*(v+2))-this->C[2]);
-    this->retorno[2]=this->N[0]*((*(v))-this->C[1])+this->N[1]*((*(v+1))-this->C[1])+this->N[2]*((*(v+2))-this->C[2]);
+    this->retorno[0]=this->U[0]*((*(v))-this->C[0])+this->U[1]*((*(v+1))-this->C[1])+this->U[2]*((*(v+2))-this->C[2]);
+    this->retorno[1]=this->V[0]*((*(v))-this->C[0])+this->V[1]*((*(v+1))-this->C[1])+this->V[2]*((*(v+2))-this->C[2]);
+    this->retorno[2]=this->N[0]*((*(v))-this->C[0])+this->N[1]*((*(v+1))-this->C[1])+this->N[2]*((*(v+2))-this->C[2]);
 
 }
 
