@@ -27,7 +27,7 @@ bool Objeto::iniciarObj(Functions* funct)
             Ponto aux;
             aux.addPonto(x,y,z);
             this->pontos[i]=aux;
-            this->funct->calcCord_vista(auxilio);
+            this->funct->calcCord_vista(this->pontos[i].GetPonto());
             this->pontos[i].addPvista(auxilio);
             cout<<(i+1)<<":"<<" "<<*this->pontos[i].GetPonto()<<","<<*(this->pontos[i].GetPonto()+1)<<","<<*(this->pontos[i].GetPonto()+2)<<endl;
         }
