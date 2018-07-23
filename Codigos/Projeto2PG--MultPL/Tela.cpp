@@ -38,8 +38,16 @@ void Tela::iniciate(Objeto* obj,Iluminacao* ilumin,Camera* Cam)
          x1=*(p1->GetPtela());
          x2=*(p2->GetPtela());
         cout<<x1<<","<<y1<<" "<<x2<<","<<y2<<endl;
-        alpha=(y2-y1)/(x2-x1);
-         //xmax=(1/alpha)+1;
+        if(x2==x1)
+        {
+
+        }
+        else{
+            alpha=(y2-y1)/(x2-x1);
+            xmax=(1/alpha)+x1;
+        }
+
+
 
     }
 }
