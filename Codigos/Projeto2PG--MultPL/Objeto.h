@@ -19,6 +19,7 @@ public:
     void setCordsVista(float* U,float* V, float* N,float* C);
     void printNormalPontos(FILE* out);
     void printNormalTriangulos(FILE* out);
+    void calPtela(float d, float hx, float hy,int width,int height);
 };
 
 

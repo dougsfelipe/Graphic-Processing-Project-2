@@ -48,3 +48,12 @@ using namespace std;
         funct->calcNorma(this->pnormal);
         this->pnormal[0]=*(aux);this->pnormal[1]=*(aux+1);this->pnormal[2]=*(aux+2);
     }
+void Ponto::addPontoTela(int x, int y)
+{
+    this->Ptela[0]=x;
+    this->Ptela[1]=y;
+}
+int* Ponto::GetPtela()
+{
+    return this->Ptela;
+}

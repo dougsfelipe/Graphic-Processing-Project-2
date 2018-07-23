@@ -75,7 +75,9 @@ void Objeto::printNormalPontos(FILE* out)
         aux=this->pontos[i].GetPnormal();
         fprintf(out,"(%f,%f,%f) -> ",*aux,*(aux+1),*(aux+2));
         aux=this->pontos[i].GetPvista();
-        fprintf(out,"(%f,%f,%f)\n",*aux,*(aux+1),*(aux+2));
+        fprintf(out,"(%f,%f,%f) -> ",*aux,*(aux+1),*(aux+2));
+        int* aux1=this->pontos[i].GetPtela();
+        fprintf(out,"(%d,%d)\n",*aux1,*(aux1+1));
     }
 }
 void Objeto::printNormalTriangulos(FILE* out)
@@ -86,5 +88,22 @@ void Objeto::printNormalTriangulos(FILE* out)
     {
         aux=this->triangulos[i].getTnormal();
         fprintf(out,"%d: (%f,%f,%f)\n",i,*aux,*(aux+1),*(aux+2));
+    }
+}
+void Objeto::calPtela(float d,float hx, float hy,int width,int height)
+{
+    float x1=0;
+    float y1=0;
+    int x=0;
+    int y=0;
+    for(int i=0;i<this->qtPontos;i++)
+    {
+        float* aux= this->pontos[i].GetPvista();
+        x1=(d/hx)*(*aux/(*(aux+2)));
+        y1=(d/hy)*(*(aux+1)/(*(aux+2)));
+        x=(int)(x1+1)*(width/2);
+        y=(int)(1-y1)*(height/2);
+        this->pontos[i].addPontoTela(x,y);
+
     }
 }

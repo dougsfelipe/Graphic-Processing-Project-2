@@ -9,6 +9,7 @@ private:
     float pnormal[3];
     float sTnomal[3];
     float PVista [3];
+    int Ptela [2];
     int nTincidentes;
 public:
     void addPonto(float x,float y,float z);
@@ -18,5 +19,7 @@ public:
     void addTnormal(float x,float y,float z);
     void addPvista(float* v);
     void normalizaNormal(Functions* funct);
+    void addPontoTela(int x, int y);
+    int* GetPtela();
 };
 #endif // PONTO_H_INCLUDED
