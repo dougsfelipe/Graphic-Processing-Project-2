@@ -30,6 +30,7 @@ using namespace std;
         this->PVista[0]=*v;
         this->PVista[1]=*(v+1);
         this->PVista[2]=*(v+2);
+        cout<<this->PVista[0]<<","<<this->PVista[1]<<","<<this->PVista[2]<<endl;
     }
     void Ponto::addTnormal(float x,float y,float z)
     {
@@ -37,7 +38,6 @@ using namespace std;
         this->sTnomal[1]=this->sTnomal[1]+y;
         this->sTnomal[2]=this->sTnomal[2]+z;
         this->nTincidentes++;
-        cout<<this->sTnomal[0]<<","<<this->sTnomal[1]<<","<<this->sTnomal[2]<<endl;
         this->pnormal[0]=this->sTnomal[0]/this->nTincidentes;
         this->pnormal[1]=this->sTnomal[1]/this->nTincidentes;
         this->pnormal[2]=this->sTnomal[2]/this->nTincidentes;

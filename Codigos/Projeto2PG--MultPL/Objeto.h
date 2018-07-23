@@ -20,6 +20,8 @@ public:
     void printNormalPontos(FILE* out);
     void printNormalTriangulos(FILE* out);
     void calPtela(float d, float hx, float hy,int width,int height);
+    int getQtriangulos();
+    int getQpontos();
 };
 
 

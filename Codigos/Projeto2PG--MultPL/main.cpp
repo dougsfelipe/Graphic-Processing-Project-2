@@ -6,7 +6,7 @@
 #include"Objeto.h"
 #include"Iluminacao.h"
 #include <stdio.h>
-
+#include "Tela.h"
 using namespace std;
 
 int main()
@@ -15,11 +15,13 @@ int main()
     Functions funct;
     Camera cam;
     Objeto obj;
+    Tela tela;
     Iluminacao Iluminacao;
     cam.InicializarCam(&funct);
     obj.iniciarObj(&funct);
     Iluminacao.inicarIluminacao(&funct);
-    obj.calPtela(cam.Getd(),cam.Gethx(),cam.Gethy(),1000,1000);
+    obj.calPtela(cam.Getd(),cam.Gethx(),cam.Gethy(),720,720);
+    tela.iniciate(&obj,&Iluminacao,&cam);
     fprintf(out,"camera:\n");
     cam.printCam(out);
     fprintf(out,"iluminacao:\n");

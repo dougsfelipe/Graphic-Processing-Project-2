@@ -10,7 +10,7 @@ private:
     float tnormal[3];
 public:
     void CriarTriangulo(Ponto* p1,Ponto* p2, Ponto* p3);
-    Ponto* getPontos();
+    Ponto** getPontos();
     float* getTnormal();
     void normalizarTnormal(Functions* funct);
 };

@@ -27,9 +27,9 @@ void Triangulo :: CriarTriangulo(Ponto* p1,Ponto* p2,Ponto* p3)
 
 
 }
-Ponto* Triangulo::getPontos()
+Ponto** Triangulo::getPontos()
 {
-    return *this->pontos;
+    return this->pontos;
 }
 float* Triangulo::getTnormal()
 {
@@ -44,3 +44,4 @@ void Triangulo::normalizarTnormal(Functions* funct)
     this->pontos[1]->addTnormal(this->tnormal[0],this->tnormal[1],this->tnormal[2]);
     this->pontos[2]->addTnormal(this->tnormal[0],this->tnormal[1],this->tnormal[2]);
 }
+

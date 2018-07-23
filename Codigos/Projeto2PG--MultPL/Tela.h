@@ -9,8 +9,7 @@
 class Tela
 {
 private:
-    float z-bufer[1000][1000];
-    int pixelsColors[1000][1000][3];
+    float zbufer[720][720];
 public:
     void iniciate(Objeto* obj,Iluminacao* ilumin,Camera* cam);
 

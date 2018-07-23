@@ -114,7 +114,7 @@
 	"Functions.h"
 	<stdio.h>
 
-1532352378 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\main.cpp
+1532379007 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\main.cpp
 	"Ponto.h"
 	"Triangulo.h"
 	<iostream>
@@ -123,23 +123,24 @@
 	"Objeto.h"
 	"Iluminacao.h"
 	<stdio.h>
+	"Tela.h"
 
 1532352378 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\ponto.h
 	<stdio.h>
 	"Functions.h"
 
-1532352378 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.h
+1532374338 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.h
 	"Ponto.h"
 	"Functions.h"
 	<stdio.h>
 
-1532352378 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\objeto.h
+1532368301 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\objeto.h
 	"Ponto.h"
 	"Triangulo.h"
 	"Functions.h"
 	<stdio.h>
 
-1532352378 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\objeto.cpp
+1532374447 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\objeto.cpp
 	<iostream>
 	<stdio.h>
 	"Ponto.h"
@@ -147,7 +148,7 @@
 	"Objeto.h"
 	"Functions.h"
 
-1532352378 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\ponto.cpp
+1532374092 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\ponto.cpp
 	<iostream>
 	"Ponto.h"
 	<math.h>
@@ -158,10 +159,28 @@
 	"PontoLuz.h"
 	<iostream>
 
-1532352378 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.cpp
+1532374362 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.cpp
 	"Triangulo.h"
 	"Ponto.h"
 	"Functions.h"
 	<iostream>
 	<stdio.h>
+
+1532378834 source:c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\tela.cpp
+	"Camera.h"
+	"Ponto.h"
+	"PontoLuz.h"
+	"Iluminacao.h"
+	"Triangulo.h"
+	"Objeto.h"
+	"Tela.h"
+	<iostream>
+
+1532370134 c:\users\jpsn\desktop\projeto-2---pg\codigos\projeto2pg--multpl\tela.h
+	"Camera.h"
+	"Ponto.h"
+	"PontoLuz.h"
+	"Iluminacao.h"
+	"Triangulo.h"
+	"Objeto.h"
 

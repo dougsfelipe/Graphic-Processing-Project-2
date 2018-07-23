@@ -12,9 +12,9 @@ bool Objeto::iniciarObj(Functions* funct)
     {
         this->funct=funct;
         fscanf(objeto,"%d",&this->qtPontos);
-        cout<<this->qtPontos<<endl;
+
         fscanf(objeto,"%d",&this->qtTriangulos);
-        cout<<this->qtTriangulos<<endl;
+
         this->pontos=new Ponto[this->qtPontos];
         this->triangulos=new Triangulo[this->qtTriangulos];
         int i=0;
@@ -29,7 +29,7 @@ bool Objeto::iniciarObj(Functions* funct)
             this->pontos[i]=aux;
             this->funct->calcCord_vista(this->pontos[i].GetPonto());
             this->pontos[i].addPvista(auxilio);
-            cout<<(i+1)<<":"<<" "<<*this->pontos[i].GetPonto()<<","<<*(this->pontos[i].GetPonto()+1)<<","<<*(this->pontos[i].GetPonto()+2)<<endl;
+
         }
 
 
@@ -38,11 +38,10 @@ bool Objeto::iniciarObj(Functions* funct)
             int p1,p2,p3;
             fscanf(objeto,"%d",&p1);fscanf(objeto,"%d",&p2);fscanf(objeto,"%d",&p3);
             Triangulo aux;
-            cout<<p1<<" "<<p2<<" "<<p3<<":"<<endl;
+
             aux.CriarTriangulo(&this->pontos[p1-1],&this->pontos[p2-1],&this->pontos[p3-1]);
             this->triangulos[i]= aux;
-            Ponto* x1= this->triangulos[i].getPontos();
-            cout<<(i+1)<<":"<<*(*x1).GetPonto()<<","<<*((*x1).GetPonto()+1)<<endl;
+            Ponto** x1= this->triangulos[i].getPontos();
             this->triangulos[i].normalizarTnormal(this->funct);
 
         }
@@ -94,6 +93,8 @@ void Objeto::calPtela(float d,float hx, float hy,int width,int height)
 {
     float x1=0;
     float y1=0;
+    float x2=0;
+    float y2=0;
     int x=0;
     int y=0;
     for(int i=0;i<this->qtPontos;i++)
@@ -101,11 +102,17 @@ void Objeto::calPtela(float d,float hx, float hy,int width,int height)
         float* aux= this->pontos[i].GetPvista();
         x1=(d/hx)*(*aux/(*(aux+2)));
         y1=(d/hy)*(*(aux+1)/(*(aux+2)));
-        x1=(x1+1)*(width/2);
-        y1=(1-y1)*(height/2);
-        x=(int)x1;
-        y=(int)y1;
+        x2=(x1+1)*(width/2);
+        y2=(1-y1)*(height/2);
+        x=(int)x2;
+        y=(int)y2;
         this->pontos[i].addPontoTela(x,y);
 
     }
+}
+int Objeto::getQpontos(){
+    return this->qtPontos;
+}
+int Objeto::getQtriangulos(){
+    return this->qtTriangulos;
 }
