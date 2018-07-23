@@ -101,8 +101,10 @@ void Objeto::calPtela(float d,float hx, float hy,int width,int height)
         float* aux= this->pontos[i].GetPvista();
         x1=(d/hx)*(*aux/(*(aux+2)));
         y1=(d/hy)*(*(aux+1)/(*(aux+2)));
-        x=(int)(x1+1)*(width/2);
-        y=(int)(1-y1)*(height/2);
+        x1=(x1+1)*(width/2);
+        y1=(1-y1)*(height/2);
+        x=(int)x1;
+        y=(int)y1;
         this->pontos[i].addPontoTela(x,y);
 
     }
