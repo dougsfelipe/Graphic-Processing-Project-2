@@ -7,9 +7,47 @@
 #include "Tela.h"
 #include <iostream>
 using namespace std;
+void calcColor(int x,int y,float* N,float* V,Iluminacao* Ilumin){
+
+}
 void calcCordVistaP(int x,int y, Triangulo* t)
 {
+    int i,j;
+    float sistema[3][4];
+    float solucao[3];
+    float coef_10, coef_20, coef_21;
+    Ponto** pontos=t.getPontos();
+    Ponto* p1 =*pontos;
+    Ponto* p2 =*(pontos+1);
+    Ponto* p3 = *(pontos+2);
+    sistema[0][0]=(float)*p1.GetPtela();sistema[0][1]=(float)*p2.GetPtela();sistema[0][2]=(float)*p3.GetPtela();sistema[0][3]=x;
+    sistema[1][0]=(float)*(p1.GetPtela()+1);sistema[1][1]=(float)*(p2.GetPtela()+1);sistema[1][2]=(float)*(p3.GetPtela()+1);sistema[0][3]=y;
+    sistema[2][0]=(float)1=(float)1;sistema[2][2]=(float)1();sistema[2][3]=1;
+    coef_10 = -1.0 * sistema[1][0] / sistema[0][0];
+    coef_20 = -1.0 * sistema[2][0] / sistema[0][0];
+    for (j = 0; j < 4; j++) {
+    sistema[1][j] += coef_10 * sistema[0][j];
+    sistema[2][j] += coef_20 * sistema[0][j];
+}
+    coef_21 = -1.0 * sistema[2][1] / sistema [1][1];
+    for (j = 1; j < 4; j++) {
+    sistema[2][j] += coef_21 * sistema[1][j];
+    }
+    solucao[2] = (sistema[2][3]) / sistema[2][2];
+    solucao[1] = (sistema[1][3] - (solucao[2] * sistema[1][2])) / sistema[1][1];
+    solucao[0] = (sistema[0][3] - (solucao[2] * sistema[0][2]) - (solucao[1] * sistema[0][1])) / sistema[0][0];
+    float ponto3d[3];
+    ponto3d[0]=(*p1->GetPvista()*solucao[0])+(*p2->GetPvista()*solucao[1])+(*p3->GetPonto()*solucao[2]);
+    ponto3d[1]=(*(p1->GetPvista()+1)*solucao[0])+(*(p2->GetPvista()+1)*solucao[1])+(*(p3->GetPonto()+1)*solucao[2]);
+    ponto3d[2]=(*(p1->GetPvista()+2)*solucao[0])+(*(p2->GetPvista()+2)*solucao[1])+(*(p3->GetPonto()+2)*solucao[2]);
+    if(ponto3d[3]<this->zbufer[x][y]){
+        this->zbufer[x][y]=ponto3d[3];
+        float nponto3d[3];
+        nponto3d[0]=(*p1->GetPnormal()*solucao[0])+(*p2->GetPnormal()*solucao[1])+(*p3->GetPnormal()*solucao[2]);
+        nponto3d[1]=(*(p1->GetPnormal()+1)*solucao[0])+(*(p2->GetPnormal()+1)*solucao[1])+(*(p3->pnormal()+1)*solucao[2]);
+        nponto3d[2]=(*(p1->GetPnormal()+2)*solucao[0])+(*(p2->GetPnormal()+2)*solucao[1])+(*(p3->GetPnormal()+2)*solucao[2]);
 
+    }
 }
 void preencherTrianguloRetaBaixo(Ponto* v1, Ponto* v2, Ponto* v3,Triangulo* t){
     int* p1;
