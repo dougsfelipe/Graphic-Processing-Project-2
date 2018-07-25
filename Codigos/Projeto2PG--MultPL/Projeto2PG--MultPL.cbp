@@ -44,6 +44,8 @@
 		<Unit filename="Ponto.h" />
 		<Unit filename="PontoLuz.cpp" />
 		<Unit filename="PontoLuz.h" />
+		<Unit filename="Tela.cpp" />
+		<Unit filename="Tela.h" />
 		<Unit filename="Triangulo.cpp" />
 		<Unit filename="Triangulo.h" />
 		<Unit filename="main.cpp" />
