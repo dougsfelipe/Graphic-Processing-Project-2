@@ -184,39 +184,39 @@
 	"Triangulo.h"
 	"Objeto.h"
 
-1532512098 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\camera.cpp
+1532563251 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\camera.cpp
 	"Camera.h"
 	<iostream>
 	<stdio.h>
 	<math.h>
 
-1532512098 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\camera.h
+1532563251 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\camera.h
 	"Functions.h"
 	<stdio.h>
 
-1532512098 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\functions.h
+1532563251 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\functions.h
 
-1532512098 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\functions.cpp
+1532567904 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\functions.cpp
 	<iostream>
 	"Functions.h"
 	<math.h>
 
-1532512098 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\iluminacao.cpp
+1532563251 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\iluminacao.cpp
 	"PontoLuz.h"
 	"Functions.h"
 	<iostream>
 	<stdio.h>
 	"Iluminacao.h"
 
-1532512098 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\pontoluz.h
+1532563251 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\pontoluz.h
 	"Functions.h"
 
-1532512098 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\iluminacao.h
+1532563251 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\iluminacao.h
 	"PontoLuz.h"
 	"Functions.h"
 	<stdio.h>
 
-1532512098 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\main.cpp
+1532567776 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\main.cpp
 	"Ponto.h"
 	"Triangulo.h"
 	<iostream>
@@ -227,30 +227,31 @@
 	<stdio.h>
 	"Tela.h"
 
-1532512098 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\ponto.h
+1532563251 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\ponto.h
 	<stdio.h>
 	"Functions.h"
 
-1532512098 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.h
+1532563251 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.h
 	"Ponto.h"
 	"Functions.h"
 	<stdio.h>
 
-1532512098 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\objeto.h
+1532563251 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\objeto.h
 	"Ponto.h"
 	"Triangulo.h"
 	"Functions.h"
 	<stdio.h>
 
-1532512098 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\tela.h
+1532568746 c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\tela.h
 	"Camera.h"
 	"Ponto.h"
 	"PontoLuz.h"
 	"Iluminacao.h"
 	"Triangulo.h"
 	"Objeto.h"
+	"Functions.h"
 
-1532512098 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\objeto.cpp
+1532563251 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\objeto.cpp
 	<iostream>
 	<stdio.h>
 	"Ponto.h"
@@ -258,18 +259,18 @@
 	"Objeto.h"
 	"Functions.h"
 
-1532512098 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\ponto.cpp
+1532569225 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\ponto.cpp
 	<iostream>
 	"Ponto.h"
 	<math.h>
 	<stdio.h>
 	"Functions.h"
 
-1532512098 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\pontoluz.cpp
+1532563251 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\pontoluz.cpp
 	"PontoLuz.h"
 	<iostream>
 
-1532512098 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.cpp
+1532563251 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\triangulo.cpp
 	"Triangulo.h"
 	"Ponto.h"
 	"Functions.h"
@@ -377,4 +378,17 @@
 	"Functions.h"
 	<iostream>
 	<stdio.h>
+
+1532568965 source:c:\users\sati\desktop\projeto-2---pg\codigos\projeto2pg--multpl\tela.cpp
+	"Camera.h"
+	"Ponto.h"
+	"PontoLuz.h"
+	"Iluminacao.h"
+	"Triangulo.h"
+	"Objeto.h"
+	"Tela.h"
+	"Functions.h"
+	<iostream>
+	<windows.h>
+	"windows.h"
 

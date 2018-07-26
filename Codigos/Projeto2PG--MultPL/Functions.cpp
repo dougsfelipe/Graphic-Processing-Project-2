@@ -11,7 +11,7 @@ float Functions::calcNorma(float* vetor)
 {
     return sqrt(pow(*(vetor),2)+pow(*(vetor+1),2)+pow(*(vetor+2),2));
 }
-void Functions::normalizar(float* vetor)
+void Functions :: normalizar(float* vetor)
 {
     float n=this->calcNorma(vetor);
     this->retorno[0]=*vetor/n;

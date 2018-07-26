@@ -6,12 +6,14 @@
 #include "Iluminacao.h"
 #include "Triangulo.h"
 #include "Objeto.h"
+#include "Functions.h"
 class Tela
 {
 private:
-    float zbufer[720][720];
+
 public:
-    void iniciate(Objeto* obj,Iluminacao* ilumin,Camera* cam);
+    void iniciate(Objeto* obj,Iluminacao* ilumin,Camera* cam,Functions* funct);
+
 
 };
 

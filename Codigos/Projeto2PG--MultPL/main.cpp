@@ -21,7 +21,7 @@ int main()
     obj.iniciarObj(&funct);
     Iluminacao.inicarIluminacao(&funct);
     obj.calPtela(cam.Getd(),cam.Gethx(),cam.Gethy(),720,720);
-    tela.iniciate(&obj,&Iluminacao,&cam);
+    tela.iniciate(&obj,&Iluminacao,&cam,&funct);
     fprintf(out,"camera:\n");
     cam.printCam(out);
     fprintf(out,"iluminacao:\n");
