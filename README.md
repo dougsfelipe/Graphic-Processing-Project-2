@@ -1,10 +1,13 @@
-# Projeto 2-PG
+# Graphic Processing - Multiple Light Sources
 
-Tema:Multiplas Fontes de Luz  <br />
-Equipe:Douglas Felipe (dfcs) , João Placido (jpsn) , Germano Pires (gpc2)
+## Team
+1.Douglas Felipe (dfcs).
+2.João Placido (jpsn).
+3.Germano Pires (gpc2).
 
-Parte Geral: Implementar o método de visualização de objetos triangulados, através do
-algoritmo de conversão por varredura, com métodos de interpolação de Phong, com a
-visibilidade garantida pelo algoritmo do “z-buffer”.
+## Project
+General Part: Implement the method of visualizing triangulated objects, through the
+scanning conversion algorithm, with Phong interpolation methods, with the
+visibility guaranteed by the “z-buffer” algorithm. ✅ 
 
-Parte Específica: Produzir visualização com múltiplas fontes de luz.
+Specific Part: Produce visualization with multiple light sources.❌
